@@ -1,5 +1,5 @@
 {
-  "name": "@uniswap/sdk",
+  "name": "@uniswap/sdk my",
   "license": "MIT",
   "version": "3.0.2",
   "description": "🛠 An SDK for building applications on top of Uniswap.",
@@ -8,7 +8,7 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/Uniswap/uniswap-sdk.git",
+  "repository": "https://github.com/Ensar2318/v2-sdk.git",
   "keywords": [
     "uniswap",
     "ethereum"
