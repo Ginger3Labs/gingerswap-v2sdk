@@ -581,10 +581,38 @@ var CurrencyAmount = /*#__PURE__*/function (_Fraction) {
     return _this;
   }
   /**
-   * Helper that calls the constructor with the ETHER currency
-   * @param amount ether amount in wei
+   * Helper that calls the constructor with the appropriate currency based on chainId
+   * @param amount amount in wei
+   * @param chainId the chain ID as integer
    */
 
+
+  CurrencyAmount.getNativeCurrency = function getNativeCurrency(chainId) {
+    switch (chainId) {
+      case exports.ChainId.SOMNIATESTNET:
+        // Somnia Testnet
+        return SOMNIATESTNET;
+
+      default:
+        return ETHER;
+    }
+  }
+  /**
+   * Helper that calls the constructor with the native currency for the given chainId
+   * @param amount amount in wei
+   * @param chainId the chain ID as integer
+   */
+  ;
+
+  CurrencyAmount["native"] = function native(amount, chainId) {
+    var nativeCurrency = this.getNativeCurrency(chainId);
+    return new CurrencyAmount(nativeCurrency, amount);
+  }
+  /**
+   * Legacy helper that calls the constructor with the ETHER currency
+   * @param amount ether amount in wei
+   */
+  ;
 
   CurrencyAmount.ether = function ether(amount) {
     return new CurrencyAmount(ETHER, amount);
