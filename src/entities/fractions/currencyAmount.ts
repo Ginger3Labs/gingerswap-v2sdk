@@ -20,7 +20,6 @@ export class CurrencyAmount extends Fraction {
    * @param chainId the chain ID as integer
    */
   public static getNativeCurrency(chainId: ChainId): Currency {
-    chainId == undefined ? ChainId.SOMNIATESTNET : chainId
     switch (chainId) {
       case ChainId.SOMNIATESTNET: // Sepolia
         return SOMNIATESTNET
@@ -35,6 +34,8 @@ export class CurrencyAmount extends Fraction {
    * @param chainId the chain ID as integer
    */
   public static native(amount: BigintIsh, chainId: ChainId): CurrencyAmount {
+    chainId == undefined ? ChainId.SOMNIATESTNET : chainId
+
     const nativeCurrency = this.getNativeCurrency(chainId)
     return new CurrencyAmount(nativeCurrency, amount)
   }
