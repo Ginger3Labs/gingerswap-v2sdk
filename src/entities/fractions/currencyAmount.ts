@@ -20,6 +20,7 @@ export class CurrencyAmount extends Fraction {
    * @param chainId the chain ID as integer
    */
   public static getNativeCurrency(chainId: ChainId): Currency {
+    chainId == undefined ? ChainId.SOMNIATESTNET : chainId
     switch (chainId) {
       case ChainId.SOMNIATESTNET: // Sepolia
         return SOMNIATESTNET
