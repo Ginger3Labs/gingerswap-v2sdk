@@ -11,6 +11,7 @@ export declare class Currency {
      * The only instance of the base class `Currency`.
      */
     static readonly ETHER: Currency;
+    static readonly SOMNIATESTNET: Currency;
     /**
      * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
      * @param decimals decimals of the currency

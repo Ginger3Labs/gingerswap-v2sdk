@@ -9,7 +9,8 @@ export enum ChainId {
   RINKEBY = 4,
   GÖRLI = 5,
   KOVAN = 42,
-  SEPOLIA = 11155111
+  SEPOLIA = 11155111,
+  SOMNIATESTNET = 50312
 }
 
 export enum TradeType {
@@ -23,7 +24,7 @@ export enum Rounding {
   ROUND_UP
 }
 
-export const FACTORY_ADDRESS = '0xE041917785707e5ee11e7202ebC2Eb4F73c9b241'
+export const FACTORY_ADDRESS = '0x31015A978c5815EdE29D0F969a17e116BC1866B1'
 
 export const INIT_CODE_HASH = '0x01429e880a7972ebfbba904a5bbe32a816e78273e4b38ffa6bdeaebce8adba7c'
 
