@@ -377,6 +377,7 @@ function Currency(decimals, symbol, name) {
 Currency.ETHER = /*#__PURE__*/new Currency(18, 'ETH', 'Ether');
 Currency.SOMNIATESTNET = /*#__PURE__*/new Currency(18, 'STT', 'Somnia Testnet');
 var ETHER = Currency.ETHER;
+var SOMNIATESTNET = Currency.SOMNIATESTNET;
 
 var _WETH;
 /**
@@ -1588,6 +1589,7 @@ exports.Percent = Percent;
 exports.Price = Price;
 exports.Route = Route;
 exports.Router = Router;
+exports.SOMNIATESTNET = SOMNIATESTNET;
 exports.Token = Token;
 exports.TokenAmount = TokenAmount;
 exports.Trade = Trade;

@@ -377,6 +377,7 @@ function Currency(decimals, symbol, name) {
 Currency.ETHER = /*#__PURE__*/new Currency(18, 'ETH', 'Ether');
 Currency.SOMNIATESTNET = /*#__PURE__*/new Currency(18, 'STT', 'Somnia Testnet');
 var ETHER = Currency.ETHER;
+var SOMNIATESTNET = Currency.SOMNIATESTNET;
 
 var _WETH;
 /**
@@ -1572,5 +1573,5 @@ var Fetcher = /*#__PURE__*/function () {
   return Fetcher;
 }();
 
-export { ChainId, Currency, CurrencyAmount, ETHER, FACTORY_ADDRESS, Fetcher, Fraction, INIT_CODE_HASH, InsufficientInputAmountError, InsufficientReservesError, MINIMUM_LIQUIDITY, Pair, Percent, Price, Rounding, Route, Router, Token, TokenAmount, Trade, TradeType, WETH, currencyEquals, inputOutputComparator, tradeComparator };
+export { ChainId, Currency, CurrencyAmount, ETHER, FACTORY_ADDRESS, Fetcher, Fraction, INIT_CODE_HASH, InsufficientInputAmountError, InsufficientReservesError, MINIMUM_LIQUIDITY, Pair, Percent, Price, Rounding, Route, Router, SOMNIATESTNET, Token, TokenAmount, Trade, TradeType, WETH, currencyEquals, inputOutputComparator, tradeComparator };
 //# sourceMappingURL=sdkmy.esm.js.map

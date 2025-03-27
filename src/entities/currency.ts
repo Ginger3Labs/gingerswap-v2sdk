@@ -34,4 +34,5 @@ export class Currency {
 }
 
 const ETHER = Currency.ETHER
-export { ETHER }
+const SOMNIATESTNET = Currency.SOMNIATESTNET
+export { ETHER, SOMNIATESTNET }

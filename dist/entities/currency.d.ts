@@ -21,4 +21,5 @@ export declare class Currency {
     protected constructor(decimals: number, symbol?: string, name?: string);
 }
 declare const ETHER: Currency;
-export { ETHER };
+declare const SOMNIATESTNET: Currency;
+export { ETHER, SOMNIATESTNET };
