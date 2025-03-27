@@ -18,6 +18,14 @@ export class Currency {
    */
   public static readonly ETHER: Currency = new Currency(18, 'ETH', 'Ether')
   public static readonly SOMNIATESTNET: Currency = new Currency(18, 'STT', 'Somnia Testnet')
+  public static readonly SOMNIALIVE: Currency = new Currency(18, 'SLA', 'Somnia Live')
+
+  public static readonly NATIVE_CURRENCIES = [
+    Currency.ETHER,
+    Currency.SOMNIATESTNET,
+    Currency.SOMNIALIVE
+  ]
+
   /**
    * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
    * @param decimals decimals of the currency
@@ -35,4 +43,5 @@ export class Currency {
 
 const ETHER = Currency.ETHER
 const SOMNIATESTNET = Currency.SOMNIATESTNET
-export { ETHER, SOMNIATESTNET }
+const SOMNIALIVE = Currency.SOMNIALIVE
+export { ETHER, SOMNIATESTNET, SOMNIALIVE }
