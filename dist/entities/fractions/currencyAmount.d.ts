@@ -1,6 +1,6 @@
 import { Currency } from '../currency';
 import JSBI from 'jsbi';
-import { BigintIsh, Rounding } from '../../constants';
+import { BigintIsh, ChainId, Rounding } from '../../constants';
 import { Fraction } from './fraction';
 export declare class CurrencyAmount extends Fraction {
     readonly currency: Currency;
@@ -9,7 +9,7 @@ export declare class CurrencyAmount extends Fraction {
      * @param amount ether amount in wei
      */
     static ether(amount: BigintIsh): CurrencyAmount;
-    static native(amount: BigintIsh, chainId: number): CurrencyAmount;
+    static native(amount: BigintIsh, chainId: ChainId): CurrencyAmount;
     protected constructor(currency: Currency, amount: BigintIsh);
     get raw(): JSBI;
     add(other: CurrencyAmount): CurrencyAmount;
