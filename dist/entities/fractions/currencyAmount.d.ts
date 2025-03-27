@@ -15,7 +15,7 @@ export declare class CurrencyAmount extends Fraction {
      * @param amount amount in wei
      * @param chainId the chain ID as integer
      */
-    static native(amount: BigintIsh, chainId: ChainId): CurrencyAmount;
+    static native(amount: BigintIsh, chainId: ChainId | undefined): CurrencyAmount;
     /**
      * Legacy helper that calls the constructor with the ETHER currency
      * @param amount ether amount in wei

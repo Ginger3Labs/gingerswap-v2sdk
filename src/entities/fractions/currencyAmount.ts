@@ -33,10 +33,10 @@ export class CurrencyAmount extends Fraction {
    * @param amount amount in wei
    * @param chainId the chain ID as integer
    */
-  public static native(amount: BigintIsh, chainId: ChainId): CurrencyAmount {
+  public static native(amount: BigintIsh, chainId: ChainId | undefined): CurrencyAmount {
     chainId == undefined ? ChainId.SOMNIATESTNET : chainId
 
-    const nativeCurrency = this.getNativeCurrency(chainId)
+    const nativeCurrency = this.getNativeCurrency(chainId!)
     return new CurrencyAmount(nativeCurrency, amount)
   }
 
