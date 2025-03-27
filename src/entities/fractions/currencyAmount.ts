@@ -21,7 +21,7 @@ export class CurrencyAmount extends Fraction {
    */
   public static getNativeCurrency(chainId: ChainId): Currency {
     switch (chainId) {
-      case ChainId.SOMNIATESTNET: // Sepolia
+      case ChainId.SOMNIATESTNET: // Somnia Testnet
         return SOMNIATESTNET
       default:
         return ETHER
