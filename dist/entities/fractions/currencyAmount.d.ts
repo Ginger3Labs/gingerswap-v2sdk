@@ -9,6 +9,7 @@ export declare class CurrencyAmount extends Fraction {
      * @param amount ether amount in wei
      */
     static ether(amount: BigintIsh): CurrencyAmount;
+    static native(amount: BigintIsh, chainId: number): CurrencyAmount;
     protected constructor(currency: Currency, amount: BigintIsh);
     get raw(): JSBI;
     add(other: CurrencyAmount): CurrencyAmount;
@@ -16,4 +17,5 @@ export declare class CurrencyAmount extends Fraction {
     toSignificant(significantDigits?: number, format?: object, rounding?: Rounding): string;
     toFixed(decimalPlaces?: number, format?: object, rounding?: Rounding): string;
     toExact(format?: object): string;
+    getNativeCurrency(chainId: number): Currency;
 }
